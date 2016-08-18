@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 Docs
+    each value, index in JSON.parse(docs)["Resources"]
+        pre
+            code#mystuff!= JSON.stringify(value, null, 4)
+
+
+
